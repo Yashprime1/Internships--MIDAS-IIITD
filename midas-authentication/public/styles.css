@@ -1,0 +1,175 @@
+
+
+.rounded-corners{
+  border-radius: 20px 70px 20px 70px;
+}
+#carouselExampleIndicators .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  padding : 0.1px;
+}
+#carouselExampleIndicators .carousel-indicators  .active{
+  width: 20px;
+  height: 10px;
+  border-radius: 41%;
+}
+#carouselExampleIndicators2 .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  padding : 0.1px;
+}
+#carouselExampleIndicators2 .carousel-indicators  .active{
+  width: 20px;
+  height: 10px;
+  border-radius: 41%;
+}
+
+@keyframes example {
+  from{transform :scale(0.9)}
+  to{transform :scale(1)}
+}
+
+#right{
+  animation:  example linear 5s infinite alternate;
+}
+
+
+
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+  margin: 20px 40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+
+.btn{
+  border-radius: 36px;
+  background: #FEE996;
+}
+form h2{
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+form{
+  width: 360px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: white;
+}
+input{
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+label{
+  display: block;
+  margin: 20px 0 10px;
+}
+button{
+  margin-top: 30px;
+  border-radius: 36px;
+  background: #FEE996;
+  border:0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.error{
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+
+footer{
+  text-align: center;
+  margin-top: 120px;
+  color: #aaa;
+}
+
+#carouselExampleIndicators{
+  z-index:0;
+  transform: translateX(20%);
+}
+
+
+#right{
+  z-index:1;
+  transform: translateX(-20%);
+}
+
+@media only screen  and (min-width : 1224px) {
+  .carousel-item {
+    height: 672px;
+    width:642px;
+  }
+  
+  .carousel-item  img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 672px;
+      min-width: 642px
+  }
+  #right #animatedBG{
+    height: 672px;
+    width:642px;
+  }
+}
+
+@media only screen  and (min-width : 1224px) {
+  .carousel-item {
+    height: 672px;
+    width:642px;
+  }
+  
+  .carousel-item  img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 672px;
+      min-width: 642px
+  }
+  #right #animatedBG{
+    height: 672px;
+    width:642px;
+  }
+}
+
+#animatedBG {
+  position: absolute;
+}
+
+#text{
+  z-index: 100;
+  position: absolute;
+  left: 170px;
+  top: 180px;
+}
