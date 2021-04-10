@@ -24,13 +24,10 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCr
 app.get('*',checkUser);
 app.use(authRoutes);
 app.get('/', (req, res) => res.render('home'));
-app.get('/Contacts', requireAuth,(req, res) => res.render('smoothies'));
+app.get('/Contacts', requireAuth,(req, res) => res.render('contact'));
 app.get('/blog-1', requireAuth,(req, res) => res.render('blog-1'));
-app.get('/blog-2', requireAuth,(req, res) => res.render('blog-2'));
+app.get('/blog-2' ,(req, res) => res.render('blog-2'));
 app.get('/internship', requireAuth,(req, res) => res.render('internship'));
 app.get('/rpapers',(req, res) => res.render('rpapers'));
 app.get('/projects',(req, res) => res.render('projects'));
 app.get('/hiring', requireAuth,(req, res) => res.render('hiring'));
-
-
-
