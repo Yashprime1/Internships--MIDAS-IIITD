@@ -5,7 +5,8 @@ const authRoutes = require('./routes/authRoutes');
 const {requireAuth,checkUser} = require('./middleware/authMiddleware')
 const cookieParser = require('cookie-parser');
 const app = express();
-
+const dotenv = require('dotenv');
+dotenv.config();
 // middleware
 app.use(express.static(__dirname+'/public'));
 app.use(express.json());
@@ -17,7 +18,7 @@ app.set('view engine', 'ejs');
 // database connection
 const dbURI = process.env.DB_URL;
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
-  .then((result) => app.listen(process.env.PORT || 3080))
+  .then((result) => app.listen(process.env.PORT || 3000))
   .catch((err) => console.log(err));
 
 // routes
